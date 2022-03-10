@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+
+{% for message in msgs %}
+<div>
+    <strong>{{ message.author }}</strong>:
+    <p>{{ message.text }}</p>
+</div>
+{% endfor %}
+
+<form action="/add-message" method="post">
+    <input name="username" placeholder="Enter your name">
+    <br>
+    <br>
+    <textarea placeholder="Enter your message" name="message" rows="5"></textarea>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
